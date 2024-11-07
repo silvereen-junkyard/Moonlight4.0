@@ -104,13 +104,13 @@ const blocked = [
   "ads-api.twitter.com"
 ];
 
-const blockedsites = [
+/*const blockedsites = [
   "pornhub.com",
   "xvideos.com",
   "xnxx.com",
   "pornmate.com",
   "bestpornsites.net"
-];
+];*/
 
 var adblock = 1;
 
@@ -176,12 +176,7 @@ self.__uv$config = {
     }
 
     // Blocking logic for blockedsites
-    if (blockedsites.includes(url.host) ||
-      url.href.toLocaleLowerCase().includes("porn") ||
-      url.href.toLocaleLowerCase().includes("18+") ||
-      url.href.toLocaleLowerCase().includes("Adult Content") ||
-      url.href.toLocaleLowerCase().includes("xvideos") ||
-      url.href.toLocaleLowerCase().includes("xxx")) {
+    if (false) {
       // Redirect to a blocked page if the site is in blockedsites
       if (!url.href.includes("?wfryhktgb")) {
         return new Request(self.location.origin + "/blocked.html", request);
